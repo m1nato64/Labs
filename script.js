@@ -1,255 +1,210 @@
 // 1
 {
-    const a = 1
+    let i = 1
+    while (i < 100) {
+        console.log(i)
+        i++
+    }
 
-    if (a === 0) {
-        alert("Верно")
-    } else {
-        alert("Неверно")
+    for (let i = 1; i < 100; i++) {
+        console.log(i)
     }
 }
 
 // 2
 {
-    const a = 1
+    let i = 11
+    while (i < 33) {
+        console.log(i)
+        i++
+    }
 
-    if (a > 0) {
-        alert("Верно")
-    } else {
-        alert("Неверно")
+    for (let i = 11; i < 33; i++) {
+        console.log(i)
     }
 }
 
 // 3
 {
-    const a = -3
+    let i = 0
+    while (i < 100) {
+        if (i % 2 === 0) {
+            console.log(i)
+        }
+        i++
+    }
 
-    if (a < 0) {
-        alert("Верно")
-    } else {
-        alert("Неверно")
+    for (let i = 0; i < 100; i++) {
+        if (i % 2 === 0) {
+            console.log(i)
+        }
     }
 }
 
 // 4
 {
-    const a = 1
-
-    if (a >= 0) {
-        alert("Верно")
-    } else {
-        alert("Неверно")
+    let i = 1
+    let sum1 = 0
+    while (i < 100) {
+        sum1 += i
+        i++
     }
+    console.log(sum1)
+
+    let sum2 = 0
+    for (let i = 0; i < 100; i++) {
+        sum2 += i
+    }
+    console.log(sum2)
 }
 
 // 5
 {
-    const a = -1
+    const array = [1, 2, 3, 4, 5]
 
-    if (a <= 0) {
-        alert("Верно")
-    } else {
-        alert("Неверно")
+    for (let i = 0; i < array.length; i++) {
+        console.log(array[i])
     }
 }
 
 // 6
 {
-    const a = -1
+    const array = [1, 2, 3, 4, 5]
+    let result = 0
 
-    if (a !== 0) {
-        alert("Верно")
-    } else {
-        alert("Неверно")
+    for (let i = 0; i < array.length; i++) {
+        result += array[i]
     }
+    console.log(result)
 }
+
 
 // 7
 {
-    const a = "test"
+    const obj = {
+        green: 'зеленый', red: 'красный', blue: 'голубой'
+    }
 
-    if (a === "test") {
-        alert("Верно")
-    } else {
-        alert("Неверно")
+    for (let key in obj) {
+        console.log(key)
+        console.log(obj[key])
     }
 }
 
 // 8
 {
-    const a = "1"
+    const obj = {
+        kolya: "200",
+        vasya: "300",
+        petya: "400"
+    }
 
-    if (a === "1") {
-        alert("Верно")
-    } else {
-        alert("Неверно")
+    for (let key in obj) {
+        console.log(`${key} - зарплата ${obj[key]} долларов`)
     }
 }
 
+
 // 9
 {
-    const test = true
+    const array = [2, 5, 9, 15, 0, 4]
 
-    test ? alert("Верно") : alert("Неверно")
-
-    if (test) {
-        alert("Верно")
-    } else {
-        alert("Неверно")
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > 3 && array[i] < 10) {
+            console.log(array[i])
+        }
     }
 }
 
 // 10
 {
-    const test = false
+    const array = [4, 0, -2, 5, -12, 10]
+    let result = 0
 
-    if (test) {
-        alert("Верно")
-    } else {
-        alert("Неверно")
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] >= 0) {
+            result += array[i]
+        }
     }
+    console.log(result)
 }
 
 // 11
 {
-    const a = 5
+    const array = [1, 2, 5, 9, 4, 13, 4, 10]
 
-    if (a > 0 && a < 5) {
-        alert("Верно")
-    } else {
-        alert("Неверно")
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] === 4) {
+            console.log("Есть")
+            break
+        }
     }
 }
 
 // 12
 {
-    let a = 5
+    const array = [10, 20, 30, 50, 235, 3000]
 
-    if (a === 0 || a === 2) {
-        a += 7
-    } else {
-        a /= 10
+    for (let i = 0; i < array.length; i++) {
+        let currentElem = array[i].toString()
+        if (currentElem[0] == 1 || currentElem[0] == 2 || currentElem[0] == 5){
+            console.log(currentElem)
+        }
     }
-
-    alert(a)
 }
 
 // 13
 {
-    const a = 1
-    const b = 3
+    const array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    let str = "-"
 
-    if (a <= 1 && b >= 3) {
-        alert(a + b)
-    } else {
-        alert(a - b)
+    for (let i = 0; i < array.length; i++) {
+        str += array[i] + "-"
     }
+    console.log(str)
 }
 
 // 14
 {
-    const a = 1
-    const b = 3
+    const array = [ "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье" ]
 
-    if ((a > 2 && a < 11) || (b >= 6 && b < 14)) {
-        alert("Верно")
-    } else {
-        alert("Неверно")
+    for (let i = 0; i < array.length; i++) {
+        let div = document.createElement("div")
+        div.textContent = array[i]
+
+        if (i > 4) {
+            div.style.fontFamily = "bold"
+        }
+
+        document.body.appendChild(div)
     }
 }
 
 // 15
 {
-    const num = 3
-    let result
+    const array = [ "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье" ]
+    const currentDay = new Date().getDay()
 
-    switch (num) {
-        case 1:
-            result = "зима"
-        case 2:
-            result = "весна"
-        case 3:
-            result = "лето"
-        case 4:
-            result = "осень"
-        default:
-            break
+    for (let i = 0; i < array.length; i++) {
+        let div = document.createElement("div")
+        div.textContent = array[i]
+
+        if (i === currentDay) {
+            div.style.fontFamily = "cursive"
+        }
+
+        document.body.appendChild(div)
     }
-
-    alert(result)
 }
 
 // 16
 {
-    const day = 20
-
-    if (day > 0 && day < 11) {
-        alert("Первая декада")
-    } else if (day > 10 && day < 21) {
-        alert("Вторая декада")
-    } else if (day > 20 && day <= 31) {
-        alert("Третья декада")
-    } else {
-        alert("Введите корректное число")
+    let n = 1000
+    let num = 0
+    while (n > 50) {
+        n /= 50
+        num++
     }
-}
-
-// 17
-{
-    const month = 6
-
-    if (month > 0 && month < 4 || month === 12) {
-        alert("Winter")
-    } else if (month > 3 && month < 6) {
-        alert("Spring")
-    } else if (month > 5 && month < 9) {
-        alert("Summer")
-    } else if (month > 8 && month < 12) {
-        alert("Autumn")
-    } else {
-        alert("Введите корректное число")
-    }
-}
-
-// 18
-{
-    const str = "abcde"
-
-    if (str[0] === "a") {
-        alert("да")
-    } else {
-        alert("нет")
-    }
-}
-
-// 19
-{
-    const numbers = "12345"
-
-    if (numbers[0] === "1" || numbers[0] === "2" || numbers[0] === "3") {
-        alert("да")
-    } else {
-        alert("нет")
-    }
-}
-
-// 20
-{
-    let numbers = "123"
-
-    alert(numbers[0] + (numbers[1]) + (numbers[2]))
-}
-
-// 21
-{
-    let numbersString = "123456"
-
-    const firstSum = (numbersString[0]) + (numbersString[1]) + (numbersString[2])
-    const secondSum = (numbersString[3]) + (numbersString[4]) + (numbersString[5])
-
-    if (firstSum === secondSum) {
-        alert("да")
-    } else {
-        alert("нет")
-    }
+    console.log(n)
+    console.log(num)
 }
